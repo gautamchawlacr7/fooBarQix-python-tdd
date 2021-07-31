@@ -26,12 +26,20 @@ def divisibilityResult(input):
 
 def fooBarQix(input):
     result = ""
-    if input != 0:
-        result += divisibilityResult(input)
+    if input == 0:
+        return "0"
+    
+    result += divisibilityResult(input)
 
-        return result
+    for element in str(input):
+        if int(element) == 3:
+            result += "Foo"
+        if int(element) == 5:
+            result += "Bar"
+        if int(element) == 7:
+            result += "Qix"
 
-    return 0
+    return result
 
 
 if __name__ == "__main__":
