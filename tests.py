@@ -29,13 +29,13 @@ class TestSequenceFunctions(unittest.TestCase):
         self.assertEqual("Qix", fooBarQix(14))
 
     def test_divisible_by_three_and_seven(self):
-        self.assertEqual("FooBar", fooBarQix(21))
+        self.assertEqual("FooQix", fooBarQix(21))
 
     def test_divisible_by_five_and_seven(self):
-        self.assertEqual("FooBar", fooBarQix(140))
+        self.assertEqual("BarQix", fooBarQix(140))
 
     def test_divisible_by_three_five_and_seven(self):
-        self.assertEqual("FooBar", fooBarQix(210))
+        self.assertEqual("FooBarQix", fooBarQix(210))
 
 if __name__ == '__main__':
     unittest.main()
