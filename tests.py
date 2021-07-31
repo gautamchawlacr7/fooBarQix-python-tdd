@@ -21,6 +21,9 @@ class TestSequenceFunctions(unittest.TestCase):
 
     def test_divisible_by_five(self):
         self.assertEqual("Bar", fooBarQix(10))
+    
+    def test_divisible_by_three_and_five(self):
+        self.assertEqual("FooBar", fooBarQix(60))
 
 if __name__ == '__main__':
     unittest.main()
