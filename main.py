@@ -11,8 +11,13 @@ def main():
     # Main entry point of the app
     print("what's popping? i am a fun converter. I convert things to FooBarQix")
 
-
 def fooBarQix(input):
+    result = ""
+    if input != 0:
+        if input%3 == 0:
+            result += "Foo"
+
+            return result
 
     return 0
 
