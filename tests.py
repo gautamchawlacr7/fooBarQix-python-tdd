@@ -14,25 +14,31 @@ class TestSequenceFunctions(unittest.TestCase):
         self.seq = list(range(10))
 
     def test_zero(self):
-        self.assertEqual(0, fooBarQix(0))
+        self.assertEqual("0", fooBarQix(0))
+    
+    def test_other_numbers(self):
+        self.assertEqual("", fooBarQix(1))
 
     def test_divisible_by_three(self):
-        self.assertEqual("Foo", fooBarQix(6))
+        self.assertEqual("FooFoo", fooBarQix(3))
 
     def test_divisible_by_five(self):
-        self.assertEqual("Bar", fooBarQix(10))
+        self.assertEqual("BarBar", fooBarQix(5))
     
     def test_divisible_by_three_and_five(self):
-        self.assertEqual("FooBar", fooBarQix(60))
+        self.assertEqual("FooBarBar", fooBarQix(15))
 
     def test_divisible_by_seven(self):
-        self.assertEqual("Qix", fooBarQix(14))
+        self.assertEqual("QixQix", fooBarQix(7))
 
     def test_divisible_by_three_and_seven(self):
         self.assertEqual("FooQix", fooBarQix(21))
 
     def test_divisible_by_five_and_seven(self):
         self.assertEqual("BarQix", fooBarQix(140))
+
+    def test_divisible_by_five_and_seven_with_three_five_inside(self):
+        self.assertEqual("BarQixFooBar", fooBarQix(35))
 
     def test_divisible_by_three_five_and_seven(self):
         self.assertEqual("FooBarQix", fooBarQix(210))
