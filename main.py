@@ -19,6 +19,9 @@ def fooBarQix(input):
 
         if input%5 == 0:
             result += "Bar"
+
+        if input%7 == 0:
+            result += "Qix"
         
         return result
 
