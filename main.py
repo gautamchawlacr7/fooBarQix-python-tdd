@@ -11,7 +11,7 @@ def main():
     # Main entry point of the app
     print("what's popping? i am a fun converter. I convert things to FooBarQix")
 
-def divisibilityResult(input):
+def divisibility_result(input):
     result = ""
     if input%3 == 0:
         result += "Foo"
@@ -29,7 +29,7 @@ def fooBarQix(input):
     if input == 0:
         return "*"
     
-    result += divisibilityResult(input)
+    result += divisibility_result(input)
 
     append_result = ""
     for element in str(input):
